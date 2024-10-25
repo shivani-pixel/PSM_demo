@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Clove Dental Plan</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+        }
+
+        header {
+            background-color: #fbe5d5;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 10%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 10;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-size: 2em;
+            color: #e97c00;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .cta-button {
+            background-color: #ff8330;
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 150px 10%;
+            background-color: #c5c6b6;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-text {
+            max-width: 50%;
+        }
+
+        .hero-text h1 {
+            font-size: 3em;
+            color: #333;
+        }
+
+        .hero-text p {
+            margin: 20px 0;
+            font-size: 1.2em;
+            color: #666;
+        }
+
+        .hero-text .price {
+            font-weight: bold;
+            font-size: 1.5em;
+            color: #333;
+        }
+
+        .cta {
+            background-color: #ff8330;
+            padding: 15px 30px;
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .hero-image {
+            width: 40%;
+            animation: slideIn 2s ease-in-out;
+        }
+
+        /* Animation */
+        @keyframes slideIn {
+            0% {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        * Hero Slider */
+.hero-slider {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    opacity: 0;
+    animation: slideAnimation 10s infinite;
+}
+
+.slide1 {
+    background: url('https://via.placeholder.com/1500x800') center/cover no-repeat;
+}
+
+.slide2 {
+    background: url('https://via.placeholder.com/1500x800/333') center/cover no-repeat;
+}
+
+/* Slide Animation */
+@keyframes slideAnimation {
+    0% {
+        opacity: 1;
+    }
+    33% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.slide:nth-child(2) {
+    animation-delay: 5s;
+}
+
+        /* Ratings and No Cost EMI Section */
+        .ratings-emi {
+            text-align: center;
+            background-color: white;
+            padding: 30px 0;
+            margin-top: 30px;
+        }
+
+        .ratings-emi h2 {
+            font-size: 1.2em;
+            color: #666;
+        }
+
+        .ratings-emi .rating {
+            margin: 10px 0;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .ratings-emi .google-rating {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .ratings-emi .google-rating img {
+            width: 30px;
+            margin-right: 10px;
+        }
+
+        .ratings-emi .cta-emi {
+            background-color: #ff8330;
+            padding: 10px 20px;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 15px;
+            display: inline-block;
+        }
+
+        /* Services Grid */
+        .services {
+            background-color: #fdf1e4;
+            padding: 40px 10%;
+            text-align: center;
+        }
+
+        .services h3 {
+            font-size: 1.6em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+        }
+
+        .service-item {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .service-item img {
+            width: 50px;
+            margin-bottom: 10px;
+        }
+
+        .service-item p {
+            margin-top: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* Form Section */
+        .consultation {
+            background-color: #fef5ec;
+            padding: 40px 10%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .consultation .form-section {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            width: 45%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .consultation .form-section h4 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .consultation .form-section input,
+        .consultation .form-section select,
+        .consultation .form-section button {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .consultation .form-section button {
+            background-color: #ff8330;
+            color: white;
+            border: none;
+            font-weight: bold;
+        }
+
+        /* Safety Protocol Section */
+        .safety-protocols {
+            width: 45%;
+            padding: 30px;
+            background-color: #fff4ed;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .safety-protocols h4 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .safety-protocols p {
+            margin-bottom: 20px;
+        }
+
+        .safety-protocols img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #fbe5d5;
+            position: relative;
+            width: 100%;
+        }
+
+        footer p {
+            color: #666;
+        }
+       
+    .horizontal-videos {
+        padding: 50px 10%;
+        background-color: #f7f7f7;
+        text-align: center;
+    }
+
+    .horizontal-videos h3 {
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    .videos-container {
+        display: flex;
+        overflow-x: auto; /* Enable horizontal scrolling */
+        gap: 20px; /* Space between video slides */
+        scroll-snap-type: x mandatory; /* Snap effect on scroll */
+        padding-bottom: 10px;
+    }
+
+    .videos-container::-webkit-scrollbar {
+        display: none; /* Hide scrollbar */
+    }
+
+    .video-slide {
+        flex: 0 0 auto; /* Prevent videos from shrinking */
+        scroll-snap-align: start; /* Ensure slides snap into place */
+        transition: transform 0.5s; /* Smooth scrolling transition */
+    }
+
+    video {
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .videos-container:hover .video-slide {
+        transform: scale(0.98); /* Slightly shrink on hover */
+    }
+    * Dental Excellence Section */
+.dental-excellence {
+    background-color: #fff4e5;
+    padding: 50px 20px;
+    text-align: center;
+    color: #333;
+}
+
+.dental-excellence h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Stats Section */
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+.stat-item {
+    text-align: center;
+    max-width: 200px;
+}
+
+.stat-item img {
+    width: 60px;
+    margin-bottom: 10px;
+}
+
+.stat-item p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.stat-item h4 {
+    font-size: 1.2rem;
+    color: #ff7f32;
+    font-weight: bold;
+}
+
+/* Doctors Section */
+.doctors {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.doctor-profile {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 200px;
+    text-align: center;
+}
+
+.doctor-profile img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.doctor-profile h4 {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #333;
+}
+
+.doctor-profile p {
+    font-size: 1rem;
+    color: #777;
+}
+
+/* Call-to-Action Button */
+.cta-button {
+    margin-top: 30px;
+}
+
+.cta-button a {
+    background-color: #ff7f32;
+    color: white;
+    padding: 10px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button a:hover {
+    background-color: #ff571a;
+}
+/* Top Image Cards Section */
+.image-cards-section {
+    position: relative;
+    width: 100%;
+    padding: 40px 0;
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card-slider {
+    display: flex;
+    gap: 20px;
+    overflow: hidden;
+}
+
+.card-item {
+    position: relative;
+    width: 600px;
+    flex: none;
+}
+
+.card-item img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.card-content h3 {
+    margin: 0 0 10px 0;
+}
+
+.learn-more {
+    color: #ffa500;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.slider-navigation {
+    position: absolute;
+    bottom: -40px;
+}
+
+.slider-navigation button {
+    background-color: #ffa500;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+/* Blog Hub Section */
+.blog-hub {
+    padding: 40px 10%;
+    background-color: #fff;
+    text-align: center;
+}
+
+.blog-hub h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.blog-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.blog-tabs .tab {
+    background-color: #f5f5f5;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #555;
+    transition: background-color 0.3s ease;
+}
+
+.blog-tabs .tab:hover,
+.blog-tabs .tab.active {
+    background-color: #ffa500;
+    color: white;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.blog-card {
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.blog-card img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.blog-info h3 {
+    font-size: 18px;
+    margin: 0 0 10px;
+    color: #333;
+}
+
+.blog-info p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.blog-info span {
+    font-size: 12px;
+    color: #999;
+}
+
+.explore-more {
+    margin-top: 30px;
+}
+
+.explore-more a {
+    text-decoration: none;
+    color: #ffa500;
+    font-weight: bold;
+}
+* Corporate Section */
+.corporate-section {
+    background-color: #fff;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.corporate-section h2 {
+    font-size: 36px;
+    color: #ff6f00;
+}
+
+.corporate-section h2 span {
+    font-size: 24px;
+    color: #333;
+}
+
+.corporate-logos img {
+    margin: 10px;
+    height: 50px;
+}
+
+.book-btn {
+    background-color: #ff6f00;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.register-link {
+    display: block;
+    margin-top: 10px;
+    color: #ff6f00;
+    text-decoration: none;
+}
+
+/* Beyond Dentistry */
+.beyond-dentistry {
+    background-color: #ffe6d5;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.beyond-dentistry h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.icon-boxes {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.icon-box {
+    text-align: center;
+}
+
+.icon-box img {
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+/* FAQ Section */
+.faq-section {
+    background-color: #fff;
+    padding: 50px 0;
+}
+
+.faq h3 {
+    font-size: 18px;
+    color: #ff6f00;
+}
+
+.faq p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Footer Section */
+footer {
+    background-color: #3c2f2f;
+    color: white;
+    padding: 30px 0;
+}
+
+.footer-column h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li a {
+    color: #f4f4f4;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid #fff;
+}
+
+.footer-bottom .social-links a img {
+    height: 20px;
+    margin-left: 10px;
+}
+.book-btn {
+    display: inline-block;
+    padding: 15px 25px;
+    background-color: #ff6600;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin: 50px;
+}
+
+.book-btn:hover {
+    background-color: #e65c00;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal:target {
+    display: flex;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 500px;
+    width: 100%;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: black;
+    text-decoration: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #ff6600;
+}
+
+.form-container {
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 1.25rem;
+    color: #ff6600;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+textarea {
+    resize: none;
+}
+
+.otp-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.verify-btn {
+    background-color: #ff6600;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover, .verify-btn:hover {
+    background-color: #e65c00;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+/* Step visibility */
+.step {
+    display: none;
+}
+
+input#step1:checked ~ #step1-content,
+input#step2:checked ~ #step2-content {
+    display: block;
+}
+
+.next-label, .back-label {
+    display: inline-block;
+    background-color: #ff6600;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.next-label:hover, .back-label:hover {
+    background-color: #e65c00;
+}
+
+</style>
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">clove:)</div>
+        <nav>
+            <a href="#">Treatments</a>
+            <a href="#">Dental Plans</a>
+            <a href="#">Our Doctors</a>
+            <a href="#">Careers</a>
+            <a href="#">Find a Clinic</a>
+            <a href="#" class="cta-button">Book Appointment</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Advance Dental Health Plan</h1>
+            <p>Dental care worth ₹8,000/-<br>only at <span class="price">₹550/-</span></p>
+            <a href="#" class="cta">Buy Now</a>
+        </div>
+        <img src="1.jpeg" alt="Smiling Woman" class="hero-image">
+        
+    </div>
+    </section>
+
+    <!-- Ratings and EMI Section -->
+    <section class="ratings-emi">
+        <h2>20+ No Cost EMI Options</h2>
+        <div class="rating">4.9/5 ⭐ | 1.7 Lakh+ Verified Smiles</div>
+        <div class="google-rating">
+            <img src="https://via.placeholder.com/30" alt="Google Logo">
+            <p>Google Ratings</p>
+        </div>
+        <a href="#" class="cta-emi">Locate nearest Clove clinic</a>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <h3>All dental issues from simple cleaning to full mouth rehabilitation under one roof</h3>
+        <div class="service-grid">
+            <div class="service-item">
+                <img src="2.jpeg" alt="Root Canal">
+                <p>Root Canal Treatment</p>
+            </div>
+            <div class="service-item">
+                <img src="3.jpeg" alt="Braces">
+                <p>Braces</p>
+            </div>
+            <div class="service-item">
+                <img src="4.jpeg" alt="Teeth Whitening">
+                <p>Teeth Whitening</p>
+            </div>
+            <div class="service-item">
+                <img src="5.jpeg" alt="Invisible Braces">
+                <p>Invisible Braces</p>
+            </div>
+            <div class="service-item">
+                <img src="7.jpeg" alt="Dental Implants">
+                <p>Dental Implants</p>
+            </div>
+            <div class="service-item">
+                <img src="16.jpeg" alt="Root Canal">
+                <p>Smile Makeover</p>
+            </div>
+            <div class="service-item">
+                <img src="12.jpeg" alt="Braces">
+                <p>Kids Dentistry</p>
+            </div>
+            <div class="service-item">
+                <img src="13.jpeg" alt="Teeth Whitening">
+                <p>Gum Treatment</p>
+            </div>
+            <div class="service-item">
+                <img src="14.jpeg" alt="Invisible Braces">
+                <p>Crowns&Bridges</p>
+            </div>
+            <div class="service-item">
+                <img src="15.jpeg" alt="Dental Implants">
+                <p>Dentures</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Consultation Form and Safety Protocols Section -->
+    <section class="consultation">
+        <!-- Consultation Form -->
+        <div class="form-section">
+            <h4>Expert Guidance for Healthy Smiles</h4>
+            <form action="#">
+                <input type="text" placeholder="Name">
+                <input type="text" placeholder="Mobile Number">
+                <select>
+                    <option>Select Concern</option>
+                    <option>Root Canal</option>
+                    <option>Braces</option>
+                    <option>Teeth Whitening</option>
+                    <option>Other</option>
+                </select>
+                <button type="submit">Book A Free Consultation</button>
+            </form>
+        </div>
+
+        <!-- Safety Protocols -->
+        <div class="safety-protocols">
+            <h4>10x Safety Protocols</h4>
+            <p>Monitored by DORI (Dental Intelligence System)</p>
+            <img src="17.jpeg" alt="Doctor Image">
+        </div>
+    </section>
+    <section class="slideshow-video" style="padding: 50px 10%; background-color: #f7f7f7; text-align: center;">
+    
+        <!-- Slideshow -->
+        <div class="slideshow-container">
+            <div class="slideshow">
+                <div class="slides fade">
+                    <img src="18.jpeg" style="width:100%">
+                </div>
+                <section class="dental-excellence">
+                    <div class="container">
+                        <!-- Heading -->
+                        <h2>Unmatched Dental Excellence by 1200+ Specialists</h2>
+                
+                        <!-- Team Statistics -->
+                        <div class="stats">
+                            <div class="stat-item">
+                                <img src="24.jpeg" alt="Team of Specialists">
+                                <p>Team of Specialists</p>
+                                <h4>75+ Dental Implants Experts</h4>
+                            </div>
+                            <div class="stat-item">
+                                <img src="25.jpeg" alt="Women Leadership">
+                                <p>Leading with</p>
+                                <h4>80% Women</h4>
+                            </div>
+                            <div class="stat-item">
+                                <img src="26.jpeg" alt="MDS Doctors">
+                                <p>65% MDS</p>
+                                <h4>Doctors for Specialised Care</h4>
+                            </div>
+                        </div>
+                
+                        <!-- Doctors Section -->
+                        <div class="doctors">
+                            <div class="doctor-profile">
+                                <img src="21.jpeg" alt="Dr. Suresh Kumar">
+                                <h4>Dr. Suresh Kumar</h4>
+                                <p>18+ Years Experience</p>
+                            </div>
+                            <div class="doctor-profile">
+                                <img src="22.jpeg" alt="Dr. Rajni Mary">
+                                <h4>Dr. Rajni Mary</h4>
+                                <p>10+ Years Experience</p>
+                            </div>
+                            <div class="doctor-profile">
+                                <img src="23.jpeg" alt="Dr. Shushma Reddy">
+                                <h4>Dr. Shushma Reddy</h4>
+                                <p>20+ Years Experience</p>
+                            </div>
+                        </div>
+                
+                        <!-- Button -->
+                        <div class="cta-button">
+                            <a href="#">Meet our Doctors</a>
+                        </div>
+                    </div>
+                </section>
+                <section class="image-cards-section">
+                    <div class="card-slider">
+                        <div class="card-item">
+                            <img src="image1.jpg" alt="Experience AIPS">
+                            <div class="card-content">
+                                <h3>Experience AIPS</h3>
+                                <p>Our AI-Powered Sterilization (AIPS) Monitoring system from DORI, USA. Exclusively at Clove</p>
+                                <a href="#" class="learn-more">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="card-item">
+                            <img src="image2.jpg" alt="Uncompromised Safety">
+                            <div class="card-content">
+                                <h3>Uncompromised Safety</h3>
+                                <p>10X Safety Protocols for a secure and worry-free dental experience</p>
+                                <a href="#" class="learn-more">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-navigation">
+                        <button class="prev-slide">&lt;</button>
+                        <button class="next-slide">&gt;</button>
+                    </div>
+                </section>
+                <div class="slides fade">
+                    <img src="20.jpeg" style="width:100%">
+                </div>
+            </div>
+        </div>
+    
+        <!-- Horizontal Scrolling Video Section -->
+<section class="horizontal-videos">
+    <h3>Watch Our Journey</h3>
+    <div class="videos-container">
+        <div class="video-slide">
+            <video width="1000" controls>
+                <source src="e:\USER\Downloads\WhatsApp Video 2024-10-25 at 12.42.23.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <!-- Add more video slides as needed -->
+    </div>
+</section>
+
+<section class="blog-hub">
+    <h2>Journey Through Knowledge: Blog Hub</h2>
+    <div class="blog-tabs">
+        <button class="tab active">General Dentistry</button>
+        <button class="tab">Cosmetics Dentistry</button>
+        <button class="tab">Crowns & Bridges</button>
+        <button class="tab">Nutrition</button>
+        <button class="tab">Oral Surgery</button>
+        <button class="tab">Root Canal</button>
+        <button class="tab">Implants & Dentures</button>
+    </div>
+    <div class="blog-grid">
+        <div class="blog-card">
+            <img src="32.jpeg" alt="Dry Sockets">
+            <div class="blog-info">
+                <h3>Dry Sockets Demystified</h3>
+                <p>Understanding the connection to tooth extraction</p>
+                <span>12th Feb 2024 | 2 min read</span>
+            </div>
+        </div>
+        <div class="blog-card">
+            <img src="32.jpeg" alt="Dry Sockets">
+            <div class="blog-info">
+                <h3>Dry Sockets Demystified</h3>
+                <p>Understanding the connection to tooth extraction</p>
+                <span>12th Feb 2024 | 2 min read</span>
+            </div>
+        </div>
+        <div class="blog-card">
+            <img src="32.jpeg" alt="Dry Sockets">
+            <div class="blog-info">
+                <h3>Dry Sockets Demystified</h3>
+                <p>Understanding the connection to tooth extraction</p>
+                <span>12th Feb 2024 | 2 min read</span>
+            </div>
+        </div>
+        <div class="blog-card">
+            <img src="32.jpeg" alt="Dry Sockets">
+            <div class="blog-info">
+                <h3>Dry Sockets Demystified</h3>
+                <p>Understanding the connection to tooth extraction</p>
+                <span>12th Feb 2024 | 2 min read</span>
+            </div>
+        </div>
+    </div>
+    <div class="explore-more">
+        <a href="#">Explore More</a>
+    </div>
+</section>
+<!-- Corporate Section -->
+<section class="corporate-section">
+    <div class="container">
+        <h2>250+ <span>Corporate Trust Us</span></h2>
+        <p>Check if your company is one of them & avail exclusive benefits</p>
+        <div class="corporate-logos">
+            <img src="27.jpeg" alt="Lakmé">
+            <img src="28.jpeg" alt="Murah">
+            <img src="29.jpeg" alt="IFFCO">
+            <img src="31.jpeg" alt="Policyba">
+        </div>
+        <button class="book-btn">Book Appointment</button>
+        <a href="#" class="register-link">Register your company</a>
+    </div>
+</section>
+
+<!-- Beyond Dentistry Section -->
+<section class="beyond-dentistry">
+    <div class="container">
+        <h2>Beyond Dentistry</h2>
+        <p>Mapping success in every area</p>
+        <div class="icon-boxes">
+            <div class="icon-box">
+                <img src="8.jpeg" alt="Educational Videos">
+                <p>Educational Videos</p>
+            </div>
+            <div class="icon-box">
+                <img src="9.jpeg" alt="News & Media">
+                <p>News & Media</p>
+            </div>
+            <div class="icon-box">
+                <img src="10.jpeg" alt="Rewards">
+                <p>Rewards</p>
+            </div>
+            <div class="icon-box">
+                <img src="11.jpeg" alt="Careers">
+                <p>Careers</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="faq-section">
+    <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq">
+            <h3>Can I choose the dentist on my own for treatment?</h3>
+            <p>Answer for the question...</p>
+        </div>
+        <div class="faq">
+            <h3>Will I get the same doctor each time I visit the same clinic?</h3>
+            <p>Answer for the question...</p>
+        </div>
+        <div class="faq">
+            <h3>How are you able to provide less prices than other dental brands?</h3>
+            <p>Answer for the question...</p>
+        </div>
+    </div>
+</section>
+
+<!-- Footer Section -->
+<footer>
+    <div class="container">
+        <div class="footer-links">
+            <div class="footer-column">
+                <h4>Treatments</h4>
+                <ul>
+                    <li><a href="#">Laser Dentistry</a></li>
+                    <li><a href="#">Braces & Aligners</a></li>
+                    <li><a href="#">Wisdom Tooth Removal</a></li>
+                    <!-- Add more links -->
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Book Appointment</a></li>
+                    <!-- Add more links -->
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Explore Clove</h4>
+                <ul>
+                    <li><a href="#">Our Team</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">News</a></li>
+                    <!-- Add more links -->
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Book Appointment Button -->
+    <a href="#appointment-modal" class="book-btn">Book Appointment</a>
+
+    <!-- Modal -->
+    <div id="appointment-modal" class="modal">
+
+        <div class="modal-content">
+            <a href="#" class="close-btn">&times;</a>
+
+            <div class="form-container">
+                <h2>Book your consultation at Clove Dental</h2>
+                <p>Please fill out the form below to book a consultation with Clove Dental.</p>
+
+                <!-- Step 1 -->
+                <input type="radio" name="steps" id="step1" checked>
+                <div class="step" id="step1-content">
+                    <h3>Step 1. Personal Details</h3>
+                    <form>
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" placeholder="Full Name" required>
+
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Email" required>
+
+                        <label for="mobile">Mobile</label>
+                        <input type="tel" id="mobile" placeholder="Mobile" required>
+
+                        <label for="otp">Enter OTP</label>
+                        <div class="otp-section">
+                            <input type="text" id="otp" placeholder="Enter OTP" required>
+                            <button type="button" class="verify-btn">Verify</button>
+                        </div>
+                        <label class="next-label" for="step2">Next</label>
+                    </form>
+                </div>
+
+                <!-- Step 2 -->
+                <input type="radio" name="steps" id="step2">
+                <div class="step" id="step2-content">
+                    <h3>Step 2. Appointment Details</h3>
+                    <form>
+                        <label for="date">Preferred Date</label>
+                        <input type="date" id="date" required>
+
+                        <label for="time">Preferred Time</label>
+                        <input type="time" id="time" required>
+
+                        <label for="message">Any Specific Concerns</label>
+                        <textarea id="message" placeholder="Enter your message" rows="4"></textarea>
+                        
+                        <button type="submit" class="submit-btn">Submit</button>
+                        <label class="back-label" for="step1">Back</label>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2023 Company Name. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><img src="33.jpeg" alt="Facebook"></a>
+                <a href="#"><img src="34.jpeg" alt="Instagram"></a>
+                <a href="#"><img src="35.jpeg" alt="LinkedIn"></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    
+
+</body>
+</html>
